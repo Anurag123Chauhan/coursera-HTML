@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.section {
+    flex: 1 0 21%; /* This makes each section take up 21% of the container width, allowing for 4 sections per row */
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.section h2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    background-color: #333;
+    padding: 5px 10px;
+}
+
+@media (max-width: 768px) {
+   .section {
+        flex: 1 0 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+   .section {
+        flex: 1 0 50%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;" >Our menu</h1>
+    <div class="container">
+        <section class="section" id="chicken">
+            <h2>Chicken</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+        <section class="section" id="beef">
+            <h2>Beef</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+        <section class="section" id="sushi">
+            <h2>Sushi</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+    </div>
+</body>
+</html>
